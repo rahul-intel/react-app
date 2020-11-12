@@ -1,0 +1,29 @@
+body, html {
+  height: 100%;
+}
+.App {
+  text-align: center;
+  color: white;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.Morning {
+    background-image: url('./images/morning.jpg');
+}
+.Afternoon {
+  background-image: url('./images/noon.jpg');
+}
+.Evening {
+  background-image: url('./images/evening.jpg');
+}
+.Night {
+  background-image: url('./images/night.jpg');
+}
+
+.Content {
+  padding-top: 100px;
+}
