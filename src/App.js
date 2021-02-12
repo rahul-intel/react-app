@@ -1,32 +1,57 @@
+import {BrowserRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import About from "./About";
+import Contact from "./Contact";
+import Greetings from './Greetings';
+import Login from './Login';
+import LoginButton from "./LoginButton";
 
 function App() {
-  const userName = "Rahul";
-  const dayParts = [
-    "Morning",
-    "Afternoon",
-    "Evening",
-    "Night",
-  ]
-  let dayPartText = '';
-  const hours = new Date().getHours();
-  console.log(hours);
-  if((hours >= 4 && hours < 12)){
-    dayPartText = dayParts[0];
-  }else if((hours >= 12 && hours < 17)){
-    dayPartText = dayParts[1];
-  }else if((hours >= 17 && hours < 21)){
-    dayPartText = dayParts[2];
-  }else if((hours >= 0 && hours < 4) || (hours > 20 && hours <= 24)){
-    dayPartText = dayParts[3];
-  }
   return (
-    <div className={`App ${dayPartText}`}>
-      <div className="Content">
-        <h2>Hello {userName}</h2>
-        <br/>
-        <h3>Good {dayPartText}</h3>
-      </div>
+    <div className="App container-fluid">
+      <Router>
+        <div className="header">
+          <div className="row">
+            <div className="col-md-10">
+              <ul className="nav nav-pills ml-3">
+                <li className="nav-item">
+                  <NavLink exact to="/" className="nav-link">Home</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink exact to="/about" className="nav-link">About</NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink exact to="/contact" className="nav-link">Contact</NavLink>
+                </li>
+              </ul>
+            </div>
+            <div className="col-md-2">
+              <div className="justify-content-end">
+                <LoginButton></LoginButton>
+                <button type="button" className="btn btn-secondary">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="Content">
+          <Switch>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <Route path="/">
+              <Greetings></Greetings>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

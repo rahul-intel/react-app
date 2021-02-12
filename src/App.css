@@ -2,15 +2,20 @@ body, html {
   height: 100%;
 }
 .App {
-  text-align: center;
-  color: white;
+  color: rgb(255, 253, 253);
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
 }
-
+.header {
+  padding: 5px 0;
+  background-color: #000000;
+}
+.header .nav .nav-link {
+  color: #ffffff;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: #B0D0E5;
+}
 .Morning {
     background-image: url('./images/morning.jpg');
 }
@@ -19,11 +24,29 @@ body, html {
 }
 .Evening {
   background-image: url('./images/evening.jpg');
+  color: rgb(12, 12, 12);
 }
 .Night {
   background-image: url('./images/night.jpg');
 }
+.Content{
+  height: 100%;
+  width: 100%;
+  background-color: #b0d0e5;
+}
+.content-inner {
+  padding: 100px 0;
+}
 
-.Content {
-  padding-top: 100px;
+.greeting-block  {
+   padding-top: 100px; 
+   height: 100%;
+   width: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+  text-align: center;
+}
+.login-heading {
+  color: #000000;
 }
