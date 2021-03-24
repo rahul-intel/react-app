@@ -19,19 +19,6 @@ body, html {
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
   background-color: #B0D0E5;
 }
-.Morning {
-    background-image: url('./images/morning.jpg');
-}
-.Afternoon {
-  background-image: url('./images/noon.jpg');
-}
-.Evening {
-  background-image: url('./images/evening.jpg');
-  color: rgb(12, 12, 12);
-}
-.Night {
-  background-image: url('./images/night.jpg');
-}
 .Content{
   height: 100%;
   width: 100%;

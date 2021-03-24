@@ -1,6 +1,12 @@
 import React from 'react';
 import Form from "./Form";
 
+const formData = { 
+    firstname: '',
+    lastname: '',
+    email: '',
+    password: ''
+    };
 function Register(props) {
     return (
         <div className="content-inner">
@@ -9,7 +15,7 @@ function Register(props) {
                     <div className="card">
                         <div className="card-body">
                             <h3 className="card-title login-heading">Register</h3>
-                            <Form isSignUp={true} />
+                            <Form isSignUp={true} formData={formData} />
                         </div>
                     </div>
                 </div>
