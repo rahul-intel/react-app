@@ -5,6 +5,7 @@ import Dashboard from './dashboard/dashboard';
 import Login from './login/Login';
 import Register from "./register/Register";
 import Header from "./common/header";
+import ClassComponents from "./class-components/classComponents";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/class-components">
+              <ClassComponents></ClassComponents>
             </Route>
             <Route path="/">
               <Dashboard></Dashboard>
